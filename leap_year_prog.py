@@ -7,8 +7,6 @@ mainwindow.geometry("400x300")
 meniu = Menu(mainwindow)
 mainwindow.config(menu=meniu)
 submenu = Menu(meniu, tearoff=0)
-submenu2 = Menu(meniu, tearoff=0)
-submenu3 = Menu(meniu, tearoff=0)
 
 meniu.add_cascade(label="Parinktys:", menu=submenu)
 submenu.add_cascade(label="Skaičiuoti nuo iki...")

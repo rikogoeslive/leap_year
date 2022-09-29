@@ -1,4 +1,5 @@
 from tkinter import *
+import webbrowser
 
 mainwindow = Tk()
 mainwindow.title("Keliamųjų metų programėlė")
@@ -8,12 +9,14 @@ meniu = Menu(mainwindow)
 mainwindow.config(menu=meniu)
 submenu = Menu(meniu, tearoff=0)
 
+def howto():
+    webbrowser.open("https://lt.wikipedia.org/wiki/Keliamieji_metai")
+
 meniu.add_cascade(label="Parinktys:", menu=submenu)
 submenu.add_cascade(label="Skaičiuoti nuo iki...")
-submenu.add_cascade(label="Kaip tai apskaičiuoti ?!")
+submenu.add_cascade(label="Kaip tai apskaičiuoti ?!", command=howto)
 submenu.add_separator()
 submenu.add_cascade(label="Išeiti iš programos")
-
 
 def calculation():
     years = int(e_year.get())

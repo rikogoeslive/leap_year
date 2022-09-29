@@ -31,6 +31,7 @@ l_year_from = Label(mainwindow, text="Įveskite metus nuo:")
 e_year_from = Entry(mainwindow)
 l_year_till = Label(mainwindow, text="iki:")
 e_year_till = Entry(mainwindow)
+button2 = Button(mainwindow, text="Patvirtinti")
 l_result = Label(mainwindow, text="", bd=5, relief=SUNKEN, anchor="w")
 
 
@@ -41,6 +42,7 @@ l_year_from.grid(row=1, column=0)
 e_year_from.grid(row=1, column=1)
 l_year_till.grid(row=1, column=2)
 e_year_till.grid(row=1, column=3)
+button2.grid(row=1, column=4)
 l_result.grid(row=2, columnspan=5, sticky=W+E)
 
 

@@ -13,7 +13,6 @@ def howto():
     webbrowser.open("https://lt.wikipedia.org/wiki/Keliamieji_metai")
 
 meniu.add_cascade(label="Parinktys:", menu=submenu)
-submenu.add_cascade(label="Skaičiuoti nuo iki...")
 submenu.add_cascade(label="Kaip tai apskaičiuoti ?!", command=howto)
 submenu.add_separator()
 submenu.add_cascade(label="Išeiti iš programos", command=quit)

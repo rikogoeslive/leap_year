@@ -4,6 +4,19 @@ mainwindow = Tk()
 mainwindow.title("Keliamųjų metų programėlė")
 mainwindow.geometry("400x300")
 
+meniu = Menu(mainwindow)
+mainwindow.config(menu=meniu)
+submenu = Menu(meniu, tearoff=0)
+submenu2 = Menu(meniu, tearoff=0)
+submenu3 = Menu(meniu, tearoff=0)
+
+meniu.add_cascade(label="Parinktys:", menu=submenu)
+submenu.add_cascade(label="Skaičiuoti nuo iki...")
+submenu.add_cascade(label="Kaip tai apskaičiuoti ?!")
+submenu.add_separator()
+submenu.add_cascade(label="Išeiti iš programos")
+
+
 def calculation():
     years = int(e_year.get())
     if (years % 400 == 0) or (years %100 != 0 and years %4 ==0): 

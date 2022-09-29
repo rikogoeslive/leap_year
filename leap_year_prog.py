@@ -3,7 +3,6 @@ import webbrowser
 
 mainwindow = Tk()
 mainwindow.title("Keliamųjų metų programėlė")
-mainwindow.geometry("400x300")
 
 meniu = Menu(mainwindow)
 mainwindow.config(menu=meniu)
@@ -28,13 +27,21 @@ def calculation():
 l_year = Label(mainwindow, text="Įveskite metus:")
 e_year = Entry(mainwindow)
 button = Button(mainwindow, text="Patvirtinti", command=calculation)
+l_year_from = Label(mainwindow, text="Įveskite metus nuo:")
+e_year_from = Entry(mainwindow)
+l_year_till = Label(mainwindow, text="iki:")
+e_year_till = Entry(mainwindow)
 l_result = Label(mainwindow, text="", bd=5, relief=SUNKEN, anchor="w")
 
 
 l_year.grid(row=0, column=0)
 e_year.grid(row=0, column=1)
 button.grid(row=0, column=2)
-l_result.grid(row=1, columnspan=5, sticky=W+E)
+l_year_from.grid(row=1, column=0)
+e_year_from.grid(row=1, column=1)
+l_year_till.grid(row=1, column=2)
+e_year_till.grid(row=1, column=3)
+l_result.grid(row=2, columnspan=5, sticky=W+E)
 
 
 mainwindow.mainloop()

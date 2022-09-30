@@ -3,6 +3,7 @@ import webbrowser
 
 mainwindow = Tk()
 mainwindow.title("Keliamųjų metų programėlė")
+mainwindow.geometry("400x500+800+250")
 
 meniu = Menu(mainwindow)
 mainwindow.config(menu=meniu)

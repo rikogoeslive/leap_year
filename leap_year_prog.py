@@ -3,7 +3,7 @@ import webbrowser
 
 mainwindow = Tk()
 mainwindow.title("Keliamųjų metų programėlė")
-mainwindow.geometry("400x500+800+250")
+mainwindow.geometry("500x150+800+250")
 
 meniu = Menu(mainwindow)
 mainwindow.config(menu=meniu)
@@ -38,11 +38,13 @@ def calculation_from_till():
 
 l_year = Label(mainwindow, text="Įveskite metus:")
 e_year = Entry(mainwindow)
+e_year.bind("<Return>", lambda event: calculation())
 button = Button(mainwindow, text="Patvirtinti", command=calculation)
 l_year_from = Label(mainwindow, text="Įveskite metus nuo:")
 e_year_from = Entry(mainwindow)
 l_year_till = Label(mainwindow, text="iki:")
 e_year_till = Entry(mainwindow)
+e_year_till.bind("<Return>", lambda event: calculation_from_till())
 button2 = Button(mainwindow, text="Patvirtinti", command=calculation_from_till)
 l_result = Label(mainwindow, text="", bd=5, relief=SUNKEN, anchor=W)
 
